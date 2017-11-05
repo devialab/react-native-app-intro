@@ -321,7 +321,7 @@ export default class AppIntro extends Component {
     return (
       <View>
         <Swiper
-          loop={false}
+          loop={this.props.loop}
           index={this.props.defaultIndex}
           renderPagination={this.renderPagination}
           onMomentumScrollEnd={(e, state) => {
@@ -369,6 +369,7 @@ AppIntro.propTypes = {
   showSkipButton: PropTypes.bool,
   showDoneButton: PropTypes.bool,
   showDots: PropTypes.bool,
+  loop: PropTypes.bool
 };
 
 AppIntro.defaultProps = {
